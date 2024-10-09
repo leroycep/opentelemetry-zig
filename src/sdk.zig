@@ -1,5 +1,6 @@
 pub const api = @import("api");
 
+pub const processor = @import("./sdk/processor.zig");
 pub const exporter = @import("./sdk/exporter.zig");
 
 pub const trace = @import("./sdk/trace.zig");

@@ -10,10 +10,10 @@ fn initTelemetry(allocator: std.mem.Allocator) !void {
     var resource = try otel.Resource.detect(allocator, .{});
     errdefer resource.deinit(allocator);
 
-    const simple_span_processor = try otel.trace.SpanProcessor.Simple.create(allocator, .{});
+    const simple_span_processor = try otel.processor.Simple.create(allocator, .{});
     errdefer simple_span_processor.spanProcessor().shutdown();
 
-    const batch_processor = try otel.trace.SpanProcessor.Batching.create(allocator, .{});
+    const batch_processor = try otel.processor.Batching.create(allocator, .{});
     errdefer batch_processor.spanProcessor().shutdown();
 
     const stderr_exporter = try otel.exporter.StdErr.create(allocator, .{});

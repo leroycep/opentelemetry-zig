@@ -1,6 +1,3 @@
-pub const Simple = @import("./SpanProcessor/Simple.zig");
-pub const Batching = @import("./SpanProcessor/Batching.zig");
-
 const Processor = @This();
 
 ptr: ?*anyopaque,

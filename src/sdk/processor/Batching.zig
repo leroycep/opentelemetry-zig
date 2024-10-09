@@ -107,5 +107,5 @@ fn span_processor_shutdown(processor: sdk.trace.SpanProcessor) void {
 }
 
 const api = @import("api");
-const sdk = @import("../../../sdk.zig");
+const sdk = @import("../../sdk.zig");
 const std = @import("std");
